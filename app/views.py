@@ -20,21 +20,17 @@ def home():
 
 @app.route('/profile/')
 def profile():
-    return render_template('profile.html', time=timeinfo())
-    
+    date = timeinfo()
+    return render_template('profile.html', date=date)
+
 def timeinfo():
-     now = time.strftime("%c")
-     return now      
+    date = 'Today is: ' + " " +  time.strftime("%a, %d %d %Y")
+    return date
 
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
-
-
-###
-# The functions below should be applicable to all Flask apps.
-###
+    return render_template('about.html', name="Winston Lindsay")
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):

@@ -1,5 +1,7 @@
+<!--{% extends "base.html" %}-->
+
+<!--{% block main %}-->
 <!doctype html>
-{% extends "base.html" %}
 <html>
    <head>
        
@@ -8,33 +10,39 @@
    </head>
    
     <body>
-        <style>
-fieldset{
-width:25%;
-background:	#B8B8B8 ;
-}
-.floatright{
-float:right;
-width:80%
+        
+<style>
+    
+    .floatright{
+float: left;
+    padding: 0px;
 }
 .floatleft{
-float:left;
-width:5%
+float: left;
+margin: 0px 15px 15px 0px;
 }
+
+
 </style>
 
+<p><h1>Profile</h1></p>
+
 <div class="floatleft">
+
 <img src="/static/img/park.jpg" alt="My Favorite football player"/>
 </div>
-<div class="floatright">
+
         
-        
-        <fieldset><p><h1></h1>Winston Lindsay </h1></p></fieldset>
-        <fieldset><p>Username: Wushum</p></fieldset>
-        <p>ID Number: 620067385</p>
-        <p>Age: 24</p>
-        <p>Gender: Male</p><br><br><br>
+        <div class="floatright">
+
+        <p><b></h1>Winston Lindsay </b></h1></p>
+        {{date}}
+        <p><b>Username:</b> Wushum</p>
+        <p><b>ID Number:</b> 620067385</p>
+        <p><b>Age:</b> 24</p>
+        <p><b>Gender:</b> Male</p><br><br>
         <p>Believe in yourself.</p>
-        
+        </div>
     </body>
 </html>
+<!--{% endblock %}-->
